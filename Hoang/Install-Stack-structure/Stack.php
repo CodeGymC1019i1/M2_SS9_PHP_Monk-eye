@@ -1,8 +1,9 @@
 <?php
 
 
-class StackList
+class Stack
 {
+    
     public $stack;
     public $limit;
     
@@ -10,28 +11,6 @@ class StackList
     {
         $this->stack = array();
         $this->limit = $limit;
-    }
-    
-    public function push($item)
-    {
-        if ($this->size() < $this->limit)
-            array_unshift($this->stack, $item);
-        else
-            echo "stack is full";
-    }
-    
-    public function pop()
-    {
-        if ($this->isEmpty())
-            echo "stack is empty";
-        else
-            return array_shift($this->stack);
-        
-    }
-    
-    public function top()
-    {
-        return current($this->stack);
     }
     
     public function size()
@@ -46,4 +25,24 @@ class StackList
         return false;
     }
     
+    public function push($item)
+    {
+        if ($this->size() < $this->limit)
+            array_unshift($this->stack, $item);
+        else
+            echo "Stack is full";
+    }
+    
+    public function pop()
+    {
+        if ($this->isEmpty())
+            echo "Stack is empty";
+        else
+            return array_unshift($this->stack);
+    }
+    
+    public function top()
+    {
+        return current($this->stack);
+    }
 }

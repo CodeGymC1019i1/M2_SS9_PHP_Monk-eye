@@ -11,11 +11,10 @@ for ($i = 0; $i < strlen($str); $i++) {
     $queueList->enqueue(substr($str, $i, 1));
 }
 for ($i = 0; $i < strlen($str); $i++) {
-    if ($stackList->pop() != $queueList->dequeue()){
+    if ($stackList->pop() != $queueList->dequeue()) {
         echo "chuoi khong doi xung";
         die();
-    }
-    else
+    } else
         continue;
 }
-echo "chuoi doi xung";
+echo "<p style='color: red' size='10'>Chuỗi Đối Xứng</p>";

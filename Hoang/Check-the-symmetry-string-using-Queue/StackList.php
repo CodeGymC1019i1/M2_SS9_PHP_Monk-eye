@@ -1,6 +1,5 @@
 <?php
 
-
 class StackList
 {
     public $stack;
@@ -46,4 +45,4 @@ class StackList
         return false;
     }
     
-}
+}ư

@@ -26,7 +26,6 @@ class StackList
             echo "stack is empty";
         else
             return array_shift($this->stack);
-        
     }
     
     public function top()
@@ -46,4 +45,11 @@ class StackList
         return false;
     }
     
+    public function toString()
+    {
+        $listItem = '';
+        for ($i = 0; $i < $this->size(); $i++)
+            $listItem .= $this->stack[$i];
+        return $listItem;
+    }
 }
